@@ -23,7 +23,7 @@ async function getUserInput() {
             resolve(number);
         });
     });
-    return await promise;
+    return promise;
 }
 
 async function game() {
