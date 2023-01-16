@@ -1,8 +1,9 @@
 
 
-function getPasswordChecker() {
+function getPasswordChecker(truePassword) {
+
     return function(password) {
-        if (password.length >= 16){
+        if (password === truePassword){
             return true
         } else {
             return false
@@ -11,5 +12,5 @@ function getPasswordChecker() {
 }
 
 
-const pass = getPasswordChecker()
+const pass = getPasswordChecker("123456789")
 console.log(pass("Jkk(D_234|"))
